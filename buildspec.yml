@@ -1,15 +1,20 @@
 version: 0.2
+
 phases:
- install:
- commands:
- - echo "Nothing to install for a static site."
- build:
- commands:
- - echo "Building (copying files for static site)..."
- post_build:
- commands:
- - echo "Build complete. Artifacts ready."
+  install:
+    runtime-versions:
+      nodejs: 18 # Change to match your app's version
+    commands:
+      - echo Installing dependencies...
+      - npm ci
+
+  build:
+    commands:
+      - echo Building the application...
+      - npm run build
+
 artifacts:
- files:
- - '**/*' # Include all files in the artifact
- base-directory: './' # The root of your repository
+  files:
+    - '**/*'
+  base-directory: build  # Change to dist/ or out/ if your build output is in a different folder
+  discard-paths: yes
