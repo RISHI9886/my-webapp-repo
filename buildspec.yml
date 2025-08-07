@@ -1,8 +1,11 @@
 version: 0.2
+
 phases:
-  install:
+  build:
     commands:
-      - echo "Installing dependencies"
-  pre_build:
-    commands:
-      - echo "This is the pre-build phase"
+      - echo "Building your app..."
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build/  # <-- folder to upload (must exist)
