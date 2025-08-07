@@ -8,4 +8,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: build/  # <-- folder to upload (must exist)
+  base-directory: build/  # sample.zip
