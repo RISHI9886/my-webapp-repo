@@ -6,12 +6,10 @@ phases:
       nodejs: 18 # Change to match your app's version
     commands:
       - echo Installing dependencies...
-      - npm ci
 
   build:
     commands:
       - echo Building the application...
-      - npm run build
 
 artifacts:
   files:
