@@ -1,18 +1,8 @@
 version: 0.2
-
 phases:
   install:
-    runtime-versions:
-      nodejs: 18 # Change to match your app's version
     commands:
-      - echo Installing dependencies...
-
-  build:
+      - echo "Installing dependencies"
+  pre_build:
     commands:
-      - echo Building the application...
-
-artifacts:
-  files:
-    - '**/*'
-  base-directory: build  # Change to dist/ or out/ if your build output is in a different folder
-  discard-paths: yes
+      - echo "This is the pre-build phase"
